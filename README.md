@@ -15,7 +15,7 @@ Installing xubuntu on VirtualBox using vagrant
 - `vagrant up`
 - soon terminal appears
 - It is not the end, installation continues
-- When finished login with usr, pwd: vagrant
+- When finished log in with usr, pwd: vagrant
 - `startx`
 - enjoy
 - You can run double commander
