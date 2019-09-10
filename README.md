@@ -9,3 +9,13 @@ Installing xubuntu on VirtualBox using vagrant
 - vagrant 
   - `choco install vagrant`
 
+# Installation
+
+- `git clone https://github.com/maxim-ge/vagrant-xubuntu.git`
+- `vagrant up`
+- soon terminal appears
+- It is not the end, installation continues
+- When finished login with usr, pwd: vagrant
+- `startx`
+- enjoy
+- You can run double commander
