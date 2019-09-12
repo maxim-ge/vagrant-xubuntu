@@ -13,6 +13,7 @@ Installing xubuntu on VirtualBox using vagrant
 # Installation
 
 - `git clone https://github.com/maxim-ge/vagrant-xubuntu.git`
+- Change `username` variable in `Vagrantfile`
 - `vagrant up`
 - Soon terminal appears
   - It is not the end, installation continues
