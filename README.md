@@ -5,9 +5,10 @@ Installing xubuntu on VirtualBox using vagrant
 # Prerequisites
 
 - Virtual Box
-  - Might be better to install it manually
+  - https://www.virtualbox.org/wiki/Downloads
+  - Better to install Virtual Box manually?
 - vagrant 
-  - https://chocolatey.org/install
+  - Install choco https://chocolatey.org/install
   - `choco install vagrant`
 
 # Installation
@@ -17,9 +18,8 @@ Installing xubuntu on VirtualBox using vagrant
 - `vagrant up`
 - Soon terminal appears
   - It is not the end, installation continues
-- Log in/out using usr/pwd: vagrant
-  - login prompt will be changed to `xubunty`
-- When installation finished log in with usr/pwd: vagrant
+- When installation finished log in using `$username`
+  - BTW: `$username` is added to `sudo` group
 - `startx`
 - Enjoy
 - BTW: you can run `double commander`
@@ -28,7 +28,3 @@ Installing xubuntu on VirtualBox using vagrant
 
 Installing Docker
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/
-
-Adding `vagrant` to `docker` group (can run docker without `sudo`)
-- `sudo usermod -a -G docker vagrant`
-- Must log out/in
