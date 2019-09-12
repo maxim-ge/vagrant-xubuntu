@@ -1,8 +1,11 @@
 # 
 
+username = "maxim-ge"
+
 Vagrant.configure(2) do |config|
+
   # Ubuntu 15.10
-  config.vm.box = "bento/ubuntu-18.04"
+  config.vm.box = "bento/ubuntu-18.10"
   config.vm.hostname = "xubuntu"
 
   config.vm.provider "virtualbox" do |vb|
@@ -15,11 +18,14 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--draganddrop", "hosttoguest"]
   end
 
+  # Create user
+  config.vm.provision "shell", inline: "sudo useradd -p \"\" #{username} -m -G sudo"
+
   # Install xfce and virtualbox additions
-  config.vm.provision "shell", inline: "sudo apt-get update"
-  config.vm.provision "shell", inline: "sudo apt-get install -y xfce4 doublecmd-gtk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11"
+#  config.vm.provision "shell", inline: "sudo apt-get update"
+#  config.vm.provision "shell", inline: "sudo apt-get install -y xfce4 doublecmd-gtk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11"
   # Permit anyone to start the GUI
-  config.vm.provision "shell", inline: "sudo sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config"
+#  config.vm.provision "shell", inline: "sudo sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config"
 end
 
 # Links
