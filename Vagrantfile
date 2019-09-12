@@ -1,5 +1,3 @@
-# 
-
 username = "maxim-ge"
 
 Vagrant.configure(2) do |config|
