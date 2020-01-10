@@ -1,10 +1,7 @@
-# 
-
 username = "maxim-ge"
 
 Vagrant.configure(2) do |config|
 
-  # Ubuntu 15.10
   config.vm.box = "bento/ubuntu-18.10"
   config.vm.hostname = "xubuntu"
 
