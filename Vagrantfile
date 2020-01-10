@@ -20,6 +20,7 @@ Vagrant.configure(2) do |config|
 
   # Create user
   config.vm.provision "shell", inline: "sudo useradd -p \"\" #{username} -m -G sudo"
+  config.vm.provision "shell", inline: "sudo chsh -s /bin/bash #{username}"
 
   # Install xfce and virtualbox additions
   config.vm.provision "shell", inline: "sudo apt-get update"

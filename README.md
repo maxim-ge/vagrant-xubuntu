@@ -26,6 +26,9 @@ Installing xubuntu on VirtualBox using vagrant
 
 # Possible Next Steps
 
+Changing Default Shell
+- sudo chsh -s /bin/bash #{username}
+
 Installing Docker
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
