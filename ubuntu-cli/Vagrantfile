@@ -1,0 +1,15 @@
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.hostname = "ubuntu-cli"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "ubuntu-cli"
+	vb.memory = "2800"
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.customize ["modifyvm", :id, "--draganddrop", "hosttoguest"]
+  end
+end
+
+# Links
+# https://github.com/chocolatey-community/chocolatey-test-environment/blob/master/Vagrantfile

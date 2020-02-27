@@ -1,6 +1,6 @@
 # vagrant-xubuntu
 
-Installing xubuntu on VirtualBox using vagrant 
+Installing ubuntu/xubuntu on VirtualBox using vagrant 
 
 # Prerequisites
 
@@ -11,10 +11,15 @@ Installing xubuntu on VirtualBox using vagrant
   - Install choco https://chocolatey.org/install
   - `choco install vagrant`
 
-# Installation
+# Installing ubuntu-cli
 
-- `git clone https://github.com/maxim-ge/vagrant-xubuntu.git`
-- Change `username` variable in `Vagrantfile`
+cd ubunti-cli
+vagrant up
+vagrant ssh
+
+# Installing xubuntu
+
+- Change `username` variable in `./Vagrantfile`
 - `vagrant up`
 - Soon terminal appears
   - It is not the end, installation continues
