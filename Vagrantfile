@@ -3,10 +3,10 @@ username = "maxim-ge"
 Vagrant.configure(2) do |config|
 
   config.vm.box = "ubuntu/bionic64"
-  config.vm.hostname = "xubuntu"
+  config.vm.hostname = "xubuntu-bionic"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.name = "xubuntu"
+    vb.name = "xubuntu-bionic"
 	vb.memory = "2800"
     vb.gui = true
     vb.customize ["modifyvm", :id, "--vram", "128"]
@@ -22,6 +22,11 @@ Vagrant.configure(2) do |config|
   # Install xfce and virtualbox additions
   config.vm.provision "shell", inline: "sudo apt-get update"
   config.vm.provision "shell", inline: "sudo apt-get install -y xfce4 doublecmd-gtk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11"
+
+  # Install
+  config.vm.provision "shell", inline: "sudo apt-get install git-gui"
+  config.vm.provision "shell", inline: "sudo apt-get install geany"
+
   # Permit anyone to start the GUI
   config.vm.provision "shell", inline: "sudo sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config"
 end

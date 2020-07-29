@@ -25,6 +25,7 @@ vagrant ssh
   - It is not the end, installation continues
 - When installation finished log in using `$username`
   - BTW: `$username` is added to `sudo` group
+- !!! Reboot machine
 - `startx`
 - Enjoy
 - BTW: you can run `double commander`
