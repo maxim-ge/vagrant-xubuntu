@@ -1,4 +1,5 @@
 username = "maxim-ge"
+password= "q"
 
 Vagrant.configure(2) do |config|
 
@@ -24,8 +25,11 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: "sudo apt-get install -y xfce4 doublecmd-gtk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11"
 
   # Install
-  config.vm.provision "shell", inline: "sudo apt-get install git-gui"
-  config.vm.provision "shell", inline: "sudo apt-get install geany"
+  config.vm.provision "shell", inline: "sudo apt-get install -y git-gui"
+  config.vm.provision "shell", inline: "sudo apt-get install -y geany"
+
+  # Change password
+  config.vm.provision "shell", inline:  "sudo echo '#{username}:#{password}' | sudo chpasswd"
 
   # Permit anyone to start the GUI
   config.vm.provision "shell", inline: "sudo sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config"
